@@ -18,6 +18,7 @@ public class WelcomeController {
 
     private final CustomerClient customerClient;
 
+    /* Test Comment */
     Logger logger = LoggerFactory.getLogger("WelcomeController");
 
     public WelcomeController(WelcomeClient welcomeClient, CustomerClient customerClient) {
