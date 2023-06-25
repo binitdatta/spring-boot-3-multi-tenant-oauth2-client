@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{mainlayout-secured.html}"
+>
+<body>
+    <main id="main">
+      <!-- ======= Cta Section ======= -->
+      <section layout:fragment="page-layout-content" id="cta" class="cta">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-lg-9 text-center text-lg-left">
+              <h3>This is our quest to stay ahead of the curve <span>By becoming an early adapter</span> of cutting edge Tech!</h3>
+              <p>We have used Spring Boot 3 , JDK 17, Spring Security 6 OAuth2 libraries and KeyCloak 21.1.1 to demonstrate a Multi Tenant Client to
+                execute menu-driven API calls to a Backend Resource Server / API. You can either loging as one of the two Realms
+              </p>
+            </div>
+            <div class="col-lg-3 cta-btn-container text-center">
+              <p>Hello &nbsp </p><p th:text="${username}"></p>
+            </div>
+          </div>
+
+        </div>
+      </section><!-- End Cta Section -->
+    </main><!-- End #main -->
+</body>
+
+</html>

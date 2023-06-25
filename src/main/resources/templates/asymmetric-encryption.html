@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{mainlayout.html}"
+>
+<body>
+    <main id="main">
+      <!-- ======= Cta Section ======= -->
+      <section layout:fragment="page-layout-content" id="cta" class="cta">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-lg-12 text-center text-lg-left">
+              <h3>A Core Building Block of IT Security is <span>Asymmetric Encryption</span></h3>
+             <ul align="left">
+               <li>
+                 <strong> Today we conduct very sensitive actions involving our personal name, address, phone numbers as well as financial and healthcare data online.</strong>
+               </li>
+               <li>
+                 <strong> Our Social Media Accounts are available online and on our phones </strong>
+               </li>
+               <li>
+                 <strong> We do online banking, post checks online, transfer money receive and send money to friends and family. </strong>
+               </li>
+               <li>
+                 <strong> We also book healthcare appointments and check health screening results online </strong>
+               </li>
+               <li>
+                 <strong> All that sensitive data if transported in plain text could be intercepted by hackers and misused / sold online and our physical/financial security could be impacted</strong>
+               </li>
+               <li>
+                 <strong>HTTP was a protocol that was invented as a plaintext protocol for university professors / CERN Scientists to interact</strong>
+               </li>
+               <li>
+                 <strong>Thus, we cannot just use HTTP only to secure our sensitive data</strong>
+               </li>
+               <li>
+                 <strong>An age-old technique of hiding plain text while transporting data / text is hashing </strong>
+               </li>
+               <li>
+                 <strong>Hashing is an algorithm that takes plain text and transform that text into cryptic text not understandable by humans</strong>
+               </li>
+               <li>
+                 <strong>Hashing is only one way meaning once a plain text is hashed , it cannot be converted into the same exact plain text again</strong>
+               </li>
+               <li>
+                 <strong>Another way to transform plain text into cryptic text is symmetric encryption that uses a common key to first encrypt plain text into cryptic text and then use the same key to decrypt the cryptic text back into plain text.</strong>
+               </li>
+               <li>
+                 <strong>Symmetric Encryption is very fast but suffers from the weakness of the common key used and that needs the encryptor to share the common key with the decrypter.</strong>
+               </li>
+               <li>
+                 <strong>If hackers can steal the common key, they can decrypt all the encrypted text.</strong>
+               </li>
+               <li>
+                 <strong>As we need both tight security and decryption of the encrypted text, we cannot use both symmetric encryption (lack of security) and hashing (we cannot get back the plain text)</strong>
+               </li>
+               <li>
+                 <strong>The answer to both problems is Asymmetric Encryption in which two rather than one key is used</strong>
+               </li>
+               <li>
+                 <strong>These two keys are called the Public Key and the Private Key and is known as a Key Pair </strong>
+               </li>
+               <li>
+                 <strong> Any text that is encrypted using the private key can be decrypted using the public key</strong>
+               </li>
+               <li>
+                 <strong> Any text that is encrypted using the public key can be decrypted using the private key</strong>
+               </li>
+               <li>
+                 <strong> Now imagine your bank website as a browser based Angular Application </strong>
+               </li>
+               <li>
+                 <strong> Imaging you are paying your credit card bills or transfering some money from one account to another</strong>
+               </li>
+               <li>
+                 <strong>So the browser has to collect your username and password for you to login and then display your credit card numbers, bank account details after querying them from the Bank REST API / Server </strong>
+               </li>
+               <li>
+                 <strong>Before any of these can happen, the browser understands that you want a secure connection with the server but how does it do that? </strong>
+               </li>
+               <li>
+                 <strong>The moment we enter the address/domain name of a website starting with https like https://securebank.com, the browser understands two things </strong>
+               </li>
+               <li>
+                 <strong>First it needs to get the real IP address of the domain name securebank.com from a hierarchy Domain Name System (DNS) </strong>
+               </li>
+               <li>
+                 <strong>Second when it gets the real IP address of the bank server or load balancer, it must establish a secure connection with that server</strong>
+               </li>
+               <li>
+                 <strong>By saying establishing a secure connection we mean the browser and the server exchanges the public key of the public/private key pair the server has </strong>
+               </li>
+               <li>
+                 <strong>There are many more complex things take place during the browser and server initial handshake but for our purpose, the browser has the public key of the key pair from the server </strong>
+               </li>
+               <li>
+                 <strong>Like Police can validate someone's driving license is a valid one, browsers can also validate that the server's public key is a valid one using its preinstalled Certificate Authorities (CAs) </strong>
+               </li>
+               <li>
+                 <strong> Now that the browser has the public key of the public/private key pair from the server, it will encrypt all sensitive data like username, password, payment amount, credit card number , bank account number when submitting back to the server </strong>
+               </li>
+               <li>
+                 <strong>The Server has the private key and can easily decrypt the encrypted information that the browser has encrypted using the public key and perform its operations </strong>
+               </li>
+               <li>
+                 <strong>When it is time for the server to transmit information back to the browser, it will encrypt the information with its private key and the browser will be able to decrypt using its public key </strong>
+               </li>
+               <li>
+                 <strong>This way the Browser and Server do not share any keys but still are able to exchange sensitive information securely </strong>
+               </li>
+               <li>
+                 <strong>Everything said about the Browser also applies to the Mobile App (iOS and Android) clients </strong>
+               </li>
+             </ul>
+            </div>
+          </div>
+
+        </div>
+      </section><!-- End Cta Section -->
+    </main><!-- End #main -->
+</body>
+</html>

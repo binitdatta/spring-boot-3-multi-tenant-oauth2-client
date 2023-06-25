@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{mainlayout.html}"
+>
+<body>
+    <main id="main">
+      <!-- ======= Cta Section ======= -->
+      <section layout:fragment="page-layout-content" id="cta" class="cta">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-lg-12 text-center text-lg-left">
+              <h3>Monitoring Applications With <span>Prometheus</span></h3>
+             <ul align="left">
+               <li>
+                 <strong>Monitoring means keeping an eye on something, like Hospitals keep a close eye on every critical patient. </strong>
+               </li>
+               <li>
+                 <strong>As all major business and govrenment organizations today are run by software and software can go from healthy to broken very quickly, it is critical that we're monitoring them closely as well.</strong>
+               </li>
+               <li>
+                 <strong>What exactly can we or shall we monitor on these Applications </strong>
+               </li>
+               <li>
+                 <strong>First, applications today are built using components like APIs, UIs, Mobile Apps, Databases, Message Brokers similar to a Car being made up of components like an Engine, transmission, four tires, breaks, windows etc.</strong>
+               </li>
+               <li>
+                 <strong>Like a Car has a monitoring system and a dashboard that highlight if anything goes wrong (Engine Check Light), we monitor our REST APIs , UIs, Databases, Message Brokers and build Dashboards to highlight problems</strong>
+               </li>
+               <li>
+                 <strong>Prometheus is one of those free, open source and extreamly popular monitoring tool known as a Time Series Database</strong>
+               </li>
+               <li>
+                 <strong>A Time Series Database collects various metrics (aka numbers) against a flow of passing time (this second, the next, and the next and so on) and stores them in its Database</strong>
+               </li>
+               <li>
+                 <strong>However, numbers by themselves are not very useful. If we say to a nurse a patient's heartbeat just increased, she would be confused about which patient we are talking about</strong>
+               </li>
+               <li>
+                 <strong> That is why numbers need to be associated with labels that can qualify them further. If we say the patient on room / bed number 20 on second floor has his heart rate increased, the Nurse can attend to that.</strong>
+               </li>
+               <li>
+                 <strong>Likewise, Prometheus can collect these metrics or performance number (requests served per second, average time taken to respond, disk utilized, disk free, 99th percentile and so on) from hundreds of VMs , Disks and Containers</strong>
+               </li>
+               <li>
+                 <strong>Then Prometheus attaches labels to qualify the web server, database, the application, to identify the metrics better to be queried later</strong>
+               </li>
+               <li>
+                 <strong>In addition, it stores these massive data in a distributed database providing safety against disk crashes and data losses</strong>
+               </li>
+               <li>
+                 <strong>It also supports a basic Graphical UI to query and chart graphs on the result data while Grafana is known as a open source popular Graphical UI based on Prometheus</strong>
+               </li>
+               <li>
+                 <strong>Each service monitored by Prometheus provides an API for Prometheus to call and collect metrics and these metadata is provided in a rules file to Prom.</strong>
+               </li>
+               <li>
+                 <strong> Finally, Prometheus has a built-in AlertManager Prometheus can periodically evaluate alerting rules if they are breached and send notifications to interested parties through the Alert Manager.</strong>
+               </li>
+             </ul>
+            </div>
+          </div>
+
+        </div>
+      </section><!-- End Cta Section -->
+    </main>
+</body>
+</html>

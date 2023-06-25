@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{mainlayout.html}"
+>
+<body>
+  <main id="main">
+      <!-- ======= Cta Section ======= -->
+        <section layout:fragment="page-layout-content" id="cta" class="cta">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-lg-12 text-center text-lg-left">
+              <h3>Aspect <span>Oriented Programming (AOP)</span></h3>
+             <ul align="left">
+               <li>
+                 <strong>The best way to understand AOP is to understand crosscutting concerns / Non Functional Requirements (NFR) in real Life</strong>
+               </li>
+               <li>
+                 <strong> Lets imagine all the major Airlines, operating from the US, (Delta, United, British, Lufthansa, Qatar, Emirates and so on)</strong>
+               </li>
+               <li>
+                 <strong>When the passengers of these massive airlines fly from a major airport, they and their luggage need security screenings </strong>
+               </li>
+               <li>
+                 <strong>In the US , the Transportation Security Administration or TSA does that screening common to all Airlines, big or small</strong>
+               </li>
+               <li>
+                 <strong>That means TSA or Security Screening is a common Aspect (English Word) of all Airlines in aviation. A lot of things in IT carry the same English meaning from their real life usage.</strong>
+               </li>
+               <li>
+                 <strong>Now let us think about APIs or UIs that need Logging, Security, Auditing, Performance Metrics Collection and other Non-Functional Requirements</strong>
+               </li>
+               <li>
+                 <strong>Doing these NFRs in 100s of APIs and UIs would be asking United and Delta to do their own security screening</strong>
+               </li>
+               <li>
+                 <strong>That is when the Software Community learned Aspect Oriented Programming and implemented AOP in many frameworks like Spring Boot using various tools</strong>
+               </li>
+               <li>
+                 <strong>But what are the tools used in AOP like TSA Agents are human beings that use xray machines, scanners, metal detectors etc?</strong>
+               </li>
+               <li>
+                 <strong>Well, In AOP, the first thing that is used are Annotations</strong>
+               </li>
+               <li>
+                 <strong>Annotations help identify which method of which class of which package needs to be served by AOP</strong>
+               </li>
+               <li>
+                 <strong>Lets look at this :     @Before("execution(public * com.rollingstone.controller.*Controller.*(..))")             </strong>
+               </li>
+               <li>
+                 <strong>We are saying that for any public method returning anything that belongs to a class ending in Controller and starting with anything else in a package com.rollingstone.controller and accepting any parameters will be a candidate for the method below </strong>
+               </li>
+               <li>
+                 <strong> public void generalAllMethodASpect() { logger.info("All Method Calls invoke this general aspect method");}</strong>
+               </li>
+               <li>
+                 <strong>A possible method candidate that can be used for AOP is called a JointPoint</strong>
+               </li>
+               <li>
+                 <strong>A possible method candidate that has been  used for AOP is called a PointCut</strong>
+               </li>
+               <li>
+                 <strong>Annotations help us reduce redundant painful repetitions of code but the JVM does not understand them</strong>
+               </li>
+               <li>
+                 <strong>Spring or any other framework has to actually modify the bytecode of the classes we write to make AOP work</strong>
+               </li>
+               <li>
+                 <strong>One way is to use Java Reflection at runtime if you know what that is but Reflection is slow because of runtime class introspection</strong>
+               </li>
+               <li>
+                 <strong>Another way is to use Java Proxy that intercepts all calls to the AOP impacted methods (we identified them using annotations above) and implement the requirements very much like TSA security for all Airlines</strong>
+               </li>
+               <li>
+                 <strong>Another way is to use Bytecode instrumentation in which Spring modifies the actual code of our candidate classes at build/startuptime to do the heavy lifting on our behalf.</strong>
+               </li>
+               <li>
+                 <strong>If we understand the above, then the roof and basement of AOP would be both clear to us.,.</strong>
+               </li>
+             </ul>
+            </div>
+          </div>
+
+        </div>
+      </section><!-- End Cta Section -->
+  </main>
+</body>
+</html>

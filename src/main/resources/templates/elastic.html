@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{mainlayout.html}"
+>
+<body>
+    <main id="main">
+      <!-- ======= Cta Section ======= -->
+      <section layout:fragment="page-layout-content" id="cta" class="cta">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-lg-12 text-center text-lg-left">
+              <h3>Text Search With <span>Elasticsearch</span></h3>
+             <ul align="left">
+               <li>
+                 <strong>The best way to understand new technology and terms is to think ourselves as users.</strong>
+               </li>
+               <li>
+                 <strong>Imagine you are driving through a US Freeway in a remote area , and you want to break for lunch or have some strong coffee</strong>
+               </li>
+               <li>
+                 <strong>You stop in a rest area, and you google the nearest McDonalds, Subway, Starbucks, Dunkins or your favorite restaurant in your Mobile Phone </strong>
+               </li>
+               <li>
+                 <strong>Millions of people across America do such searches and the responses needs to be superfast, like lightning fast</strong>
+               </li>
+               <li>
+                 <strong>This use case is called Location Search and is used by all national companies / restaurant chains, pharmacy chains, and all businesses </strong>
+               </li>
+               <li>
+                 <strong>Before such searches can  be served, we need to understand the nature of the data and nature of existing storage platforms</strong>
+               </li>
+               <li>
+                 <strong>RRelational Databases (RDBMS) are excellent storage platforms but they are not very good for taking in millions of requests and respond quickly.</strong>
+               </li>
+               <li>
+                 <strong>Because Relational Databases support transactional integrity or ACID principles (Atomic, Consistent, Durable and Isolated) </strong>
+               </li>
+               <li>
+                 <strong>All distributed storage platforms that can scale storage and retrieval as data volume / request volume grows, gives up ACID for that easy growth/scalability</strong>
+               </li>
+               <li>
+                 <strong>Thus Elasticsearch is one such DISTRIBUTED (multiple computers or VMs work together to form a single team i.e. Cluster to store and serve data)</strong>
+               </li>
+               <li>
+                 <strong>In Elasticsearch we have various types of players called Master Nodes, Data Nodes and Query Nodes</strong>
+               </li>
+               <li>
+                 <strong>The Master Node accepts all connections from clients and routes them to either data nodes or query nodes depending on usecases</strong>
+               </li>
+               <li>
+                 <strong>Master Node serve as a Router a traffic control / routing agent for the other data and query nodes</strong>
+               </li>
+               <li>
+                 <strong>Data Nodes store data, replicate data stored in other data nodes for safety if the original crashes etc.</strong>
+               </li>
+               <li>
+                 <strong>Query nodes parse Elastic Queries which are submitted through REST API and determines exact data locations, get data from those data nodes and combine the data and serve to the Clients </strong>
+               </li>
+               <li>
+                 <strong>Elastic stores data in files called indexes but these indexes are divided into smaller segmented files called sherds in various data nodes </strong>
+               </li>
+               <li>
+                 <strong>Each sherd data is also kept into two other data nodes apart from the original (normally) to prepare for node loss. </strong>
+               </li>
+               <li>
+                 <strong>Like in RDBMS, one table stores multiple Rows, Elastic Index stores multiple Document, one Document is comparable to one RDBMS Row and one Table is comparable to one Index </strong>
+               </li>
+               <li>
+                 <strong>Like in RDBMS, one row stores multiple columns, Elastic Document stores multiple Fields, one Field is comparable to one RDBMS Column </strong>
+               </li>
+               <li>
+                 <strong>Now imagine when you are searching for a McDonald's location using your zipcode or Latitude / Longitude , Elastic is searching several Data Nodes IN PARALLEL because data is stored in distributed manner  </strong>
+               </li>
+               <li>
+                 <strong>Now imagine when you are searching for a McDonald's location using your zipcode or Latitude / Longitude , Elastic is searching several Data Nodes IN PARALLEL because data is stored in distributed manner  </strong>
+               </li>
+               <li>
+                 <strong>This parallel nature of Elasticsearch gives it the superfast response time that we see.</strong>
+               </li>
+               <li>
+                 <strong>The other massive Elastic use case is product search in any huge Ecommerce platform or Supply Chain Platform that deals with millions (265 Million ) or Billions of Sellable Products online.</strong>
+               </li>
+               <li>
+                 <strong>You can imagine the massive storage indexes for such a huge product index to support customer search fast</strong>
+               </li>
+               <li>
+                 <strong>Now that you understood, Elastic, enjoy your food/drink!</strong>
+               </li>
+             </ul>
+            </div>
+          </div>
+
+        </div>
+      </section><!-- End Cta Section -->
+
+    </main><!-- End #main -->
+</body>
+</html>

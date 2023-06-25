@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{mainlayout.html}"
+>
+<body>
+  <main id="main">
+  <!-- ======= Cta Section ======= -->
+      <section layout:fragment="page-layout-content" id="cta" class="cta">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-lg-12 text-center text-lg-left">
+              <h3>Spring <span>Boot (3) Actoator</span></h3>
+             <ul align="left">
+               <li>
+                 <strong> Spring Boot comes with its own monitoring system called Actuator</strong>
+               </li>
+               <li>
+                 <strong>if we have included a dependency named spring-boot-starter-actuator and include a few properties, it will work</strong>
+               </li>
+               <li>
+                 <strong>The default Actuator endpoint for this service is : http://localhost:19090/actuator </strong>
+               </li>
+               <li>
+                 <strong>To see all Beans that Spring Configured for us Hit : http://localhost:19090/actuator/beans</strong>
+               </li>
+               <li>
+                 <strong>If there is a local cache manager, we can see that in : http://localhost:19090/actuator/caches</strong>
+               </li>
+               <li>
+                 <strong>To check the default health of the Service, hit : http://localhost:19090/actuator/health</strong>
+               </li>
+               <li>
+                 <strong>To check if the Service is up or running or get some information, hit : http://localhost:19090/actuator/info</strong>
+               </li>
+               <li>
+                 <strong>To see all conditional beans : Hit : http://localhost:19090/actuator/conditions</strong>
+               </li>
+               <li>
+                 <strong>To see Log Levels , Hit : http://localhost:19090/actuator/loggers</strong>
+               </li>
+               <li>
+                 <strong>To get a heapsump, hit : http://localhost:19090/actuator/heapdump </strong>
+               </li>
+               <li>
+                 <strong>To get a threaddump, hit : http://localhost:19090/actuator/threaddump </strong>
+               </li>
+               <li>
+                 <strong>To get the names all metrics : http://localhost:19090/actuator/metrics </strong>
+               </li>
+               <li>
+                 <strong>To get a metric of application ready time , hit : http://localhost:19090/actuator/metrics/application.ready.time </strong>
+               </li>
+               <li>
+                 <strong>To get a metric of application started time , hit : http://localhost:19090/actuator/metrics/application.started.time </strong>
+               </li>
+               <li>
+                 <strong>Likewise Spring Boot frees Banks and Retail Organizations (and others) to write their business logic while Spring Boot provides general services security, DB connectivity etc </strong>
+               </li>
+             </ul>
+            </div>
+          </div>
+        </div>
+      </section><!-- End Cta Section -->
+  </main>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{mainlayout.html}"
+>
+<body>
+    <main id="main">
+     <!-- ======= Cta Section ======= -->
+      <section layout:fragment="page-layout-content" id="cta" class="cta">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-lg-12 text-center text-lg-left">
+              <h3>Welcome To <span>Interface Driven Programming</span></h3>
+             <ul align="left">
+               <li>
+                 <strong>Imagine a Retail Bank and the Teller Counters it has</strong>
+               </li>
+               <li>
+                 <strong>The actual Bank Employees who sit behind the Teller Counters keep changing but the Teller counters work the same way for the customers</strong>
+               </li>
+               <li>
+                 <strong>Thus, the Teller Counters implement a uniform Interface and all the employees who sit (aka implements) the Teller Counter, works the same way </strong>
+               </li>
+               <li>
+                 <strong>Now imagine driving 5 different cars all of which has the Gas and Break pedals</strong>
+               </li>
+               <li>
+                 <strong>Irrespective of the Make and Model and Year, all Gas and Break Pedals work / behave the same way</strong>
+               </li>
+               <li>
+                 <strong>This Car Manufacturing is another example of Interface Driven Manufacturing keeping the outward behavior same with inner differences hidden</strong>
+               </li>
+               <li>
+                 <strong>Information Technology industry and Java, Spring heavily draw upon this Interface Driven Concept</strong>
+               </li>
+               <li>
+                 <strong>In the Java Enterprise Edition (JEE) all the functionality provided under different modules like JDBC, ORM (JPA) , JMS and others are just INTERFACES nothing else</strong>
+               </li>
+               <li>
+                 <strong>These interfaces (JDBC/JPA) for example are implmented by providers like Spring, Hibernate, EclipseLink, Oracle, MySQL, MSFT SqlServer, IBM DB2 and so on, ActiveMQ, RabbitMQ, IBM MQ etc</strong>
+               </li>
+               <li>
+                 <strong>In Spring MVC and Spring Security itself we will encounter many many such interfaces and the implementations will either be written by Spring or by us</strong>
+               </li>
+               <li>
+                 <strong>In this Application, the CustomerClient is an interface telling Spring where the Server lives (host and port) and what URL it has to call in what HTTP Method</strong>
+               </li>
+               <li>
+                 <strong>At Runtime Spring Boot writes a dynamic implementation (if you debug you can see the class) and it works</strong>
+               </li>
+             </ul>
+            </div>
+          </div>
+
+        </div>
+      </section><!-- End Cta Section -->
+    </main><!-- End #main -->
+</body>
+
+</html>
