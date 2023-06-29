@@ -15,7 +15,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers("/login", "/mainlayout.html", "/actuator/**", "/actuator-docs", "fragments/**", "/spring-security", "/header", "/security", "/oidc", "/oauth2", "/jwt","/keycloak", "/asymmetric-encryption",
                                 "/asymmetric-encryption", "/spring-di","/aop", "/spring-event","/spring-data-jpa",
-                                "/interface-driven-programming","/springsec-architecture", "/actuator", "/prometheus", "/elastic","/keycloak-multi-idp", "/owasp-top-ten", "/spring-boot", "/spring-boot", "/error", "/resources/**", "/css/**","/js/**", "../img/**", "/assets/**", "/webjars/**").permitAll()
+                                "/interface-driven-programming","/springsec-architecture", "/actuator", "/prometheus", "/elastic","/keycloak-multi-idp", "/owasp-top-ten", "/spring-boot", "/spring-boot", "/error", "/resources/**", "/css/**","/js/**", "/img/**", "/assets/**").permitAll()
                         .anyRequest().authenticated())
                 //.oauth2Login(withDefaults())
                 .oauth2Login(oauth2 -> oauth2.loginPage("/login")) // Did this to customize the bad looking static page
