@@ -1,7 +1,6 @@
 package com.rollingstone.controller;
 
 import com.rollingstone.config.CustomerClient;
-import com.rollingstone.config.WelcomeClient;
 import com.rollingstone.dto.CustomerDTO;
 import com.rollingstone.model.Address;
 import com.rollingstone.model.Customer;
@@ -10,7 +9,6 @@ import com.rollingstone.model.User;
 import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.cglib.core.Local;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -30,13 +28,11 @@ import java.util.List;
 public class HomeController {
 
     private final CustomerClient customerClient;
-    private final WelcomeClient welcomeClient;
 
     DateTimeFormatter DATEFORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
-    public HomeController(WelcomeClient welcomeClient, CustomerClient customerClient, WelcomeClient welcomeClient1) {
+    public HomeController(CustomerClient customerClient) {
         this.customerClient = customerClient;
-        this.welcomeClient = welcomeClient1;
     }
     Logger logger = LoggerFactory.getLogger("HomeController");
     @RequestMapping("/login")
@@ -47,9 +43,7 @@ public class HomeController {
 
     @GetMapping("/")
     public String index(Authentication authentication, Model model) {
-        String welcome = welcomeClient.sayHello();
         logger.info(" authentication.getName() : " + authentication.getName());
-        logger.info("Welcome " + welcome);
         model.addAttribute("username", authentication.getName());
 
         return "logged_in";
