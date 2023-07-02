@@ -17,9 +17,10 @@
               </div>
             </div>
           </div>
+          <hr>
           <div class="row">
             <div class="col-lg-12 text-center text-lg-left">
-              <h3>Spring <span>Boot (3) to Boost Productivity</span></h3>
+              <h3>Spring <span>Security (6) Login With UN/PW Architecture</span></h3>
              <ul align="left">
                <li>
                  <strong>Servlet Filters first came into life during the first release of Java Enterprise Edition in 1996/1997.</strong>
@@ -82,6 +83,114 @@
                  <strong>For subsequent requests by the same now logged-in user, Spring Security can retrive the token / cookies / JSESSION Cookie from the HttpServletRequest and check / match its presence in the SecurityContext, preventing further login by the same user.</strong>
                </li>
              </ul>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-lg-12 text-center text-lg-left">
+              <img src="/img/portfolio/OAuth2_1.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Spring Security OAuth 2 Flow</h4>
+                <a href="https://github.com/DowlathBashaG/SpringBoot-Security-OAuth" class="details-link" title="More About Spring Security OAuth2 Architecture"><i class="bx bx-link"></i>Click To Learn More</a>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-lg-12 text-center text-lg-left">
+              <h3>Spring <span>Security (6) OAuth2 Flow Description</span></h3>
+              <ul align="left">
+                <li>
+                  <strong>The Spring Security OAuth2 Resource Server Does not call the IAM (KeyCloak Here) Authorization Everytime it receives a Token to validate it</strong>
+                </li>
+                <li>
+                  <strong>OAuth2 has something called a jwks-set-uri and that property provides the URL of the Authorization Server to get its public key</strong>
+                </li>
+                <li>
+                  <strong>If you have understood the Asymmetric Encryption, you will understand that any token whose signature is generated with the private key of the AuthServer, will be decrypted with the public key of the same Auth. Server</strong>
+                </li>
+                <li>
+                  <strong>Spring Security Resource Server has to get the public key of the AuthServer, store it and continue to be able to validate the access tokens, without actively calling the AuthServer everytime for validation.</strong>
+                </li>
+                <li>
+                  <strong>With that explaining the (1) above, lets understand 2 onwards</strong>
+                </li>
+                <li>
+                  <strong>In (2), The OAuth2 Resource Owner, (User), tries to access the Service Through the Client</strong>
+                </li>
+                <li>
+                  <strong>The Client (3) realizes that the Resource Owner has not authenticated and redirect the RO to the Authorization Server and he/she authenticates / authorization the Client</strong>
+                </li>
+                <li>
+                  <strong>In (4), The Auth. Server issues the Access Token to the Client.</strong>
+                </li>
+                <li>
+                  <strong> In 5, The Client access the Service (Resource Server) with the Access Token and the Resource Server is able to validate the token and serve the request. </strong>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-lg-12 text-center text-lg-left">
+              <img src="/img/portfolio/OAuth2_2.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Spring Security OAuth2 Architecture</h4>
+                <a href="https://github.com/DowlathBashaG/SpringBoot-Security-OAuth" class="details-link" title="More About Spring Security OAuth2  Architecture"><i class="bx bx-link"></i>Click To Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12 text-center text-lg-left">
+              <h3>Spring <span>Security (6) OAuth2 Architecture Description </span></h3>
+              <ul align="left">
+                <li>
+                  <strong>Spring Security uses a specialized Authentication filter called the BearerTokenAuthenticationFilter</strong>
+                </li>
+                <li>
+                  <strong>The BearerTokenAuthenticationFilter, extracts the Bearer Token from the Request Header</strong>
+                </li>
+                <li>
+                  <strong>The BearerTokenAuthenticationFilter hands over the validation of the Bearer Token to the AuthenticationManager</strong>
+                </li>
+                <li>
+                  <strong>In a Multi Tenant Situation, the AuthenticationManager has an AuthenticationManagerResolver</strong>
+                </li>
+                <li>
+                  <strong>The AuthenticationManagerResolver is a Map of Multiple AuthenticationManager held against a Key of Issuer (found in the token)</strong>
+                </li>
+                <li>
+                  <strong>Once the AuthenticationManagerResolver provides the right AuthenticationManager, it tries to validate the token</strong>
+                </li>
+                <li>
+                  <strong>Failure (3) will be handled by the AuthenticationFailureHandler</strong>
+                </li>
+                <li>
+                  <strong>Sucess (4) will see the AuthenticationManager update the SecurityContentHolder and continue the application request</strong>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <hr>
+          <div class="row">
+            <div class="col-lg-12 text-center text-lg-left">
+              <img src="/img/portfolio/OAuth2_3.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Spring Security OAuth2 Classes</h4>
+                <a href="https://github.com/DowlathBashaG/SpringBoot-Security-OAuth" class="details-link" title="More About Spring Security  OAuth2 Architecture"><i class="bx bx-link"></i>Click To Learn More</a>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-lg-12 text-center text-lg-left">
+              <img src="/img/portfolio/OAuth2_4.jpeg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Spring Security UN/PW Architecture Showing Multiple AuthenticationProvider and How the Filter encapsulates the SecurityContextHolder</h4>
+                <a href="https://github.com/DowlathBashaG/SpringBoot-Security-OAuth" class="details-link" title="More About Spring Security  OAuth2 Architecture"><i class="bx bx-link"></i>Click To Learn More</a>
+              </div>
             </div>
           </div>
 
