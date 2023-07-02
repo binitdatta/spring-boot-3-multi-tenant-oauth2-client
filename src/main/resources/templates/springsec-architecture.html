@@ -8,55 +8,78 @@
       <!-- ======= Cta Section ======= -->
       <section layout:fragment="page-layout-content" id="cta" class="cta">
         <div class="container">
-
+          <div class="row">
+            <div class="col-lg-12 text-center text-lg-left">
+              <img src="/img/portfolio/spring_security_arch.jpeg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Spring Security Architecture</h4>
+                <a href="https://www.javainuse.com/webseries/spring-security-jwt/chap3" class="details-link" title="More About Spring Security Architecture"><i class="bx bx-link"></i>Click To Learn More</a>
+              </div>
+            </div>
+          </div>
           <div class="row">
             <div class="col-lg-12 text-center text-lg-left">
               <h3>Spring <span>Boot (3) to Boost Productivity</span></h3>
              <ul align="left">
                <li>
-                 <strong> Every once in a while, when we drive, as drivers of our cars, we do little work compared to what the car itself does to move us.</strong>
+                 <strong>Servlet Filters first came into life during the first release of Java Enterprise Edition in 1996/1997.</strong>
                </li>
                <li>
-                 <strong>We press the Gas Pedal and the Car does a lot, we press the break pedal and again the Car does a lot.</strong>
+                 <strong>We can imagine Servlet Filters like the US Transportation Security Administration (TSA) in US Airports.</strong>
                </li>
                <li>
-                 <strong>However, unlie driving, enterprise application development even using Spring Framework was still lots of work </strong>
+                 <strong>Like TSA can stop, check and allow / deny entry all travellers in airports, Servlet Filters do the same for Web Traffic</strong>
                </li>
                <li>
-                 <strong> Applications across business verticals from Banking, to Retail to Healthcare need Database Connectivity, Message Broker Connectivity for example</strong>
+                 <strong>Spring Security heavily uses Servlet Filters right from the first version and even till now.</strong>
                </li>
                <li>
-                 <strong>In Spring Framework, we worked a lot more just to configure these Database connections, message broker connecitons</strong>
+                 <strong>In TSA Security scanning, some travellers with prior clearance (PreCheck) get to  pass through</strong>
                </li>
                <li>
-                 <strong>That effort took away from our primary focus which is writing business logic</strong>
+                 <strong>In Servlet Filter driven Spring Security also, we can identify Web URLs for public static assets and URLs like the landing page, the login page to be cleared without Security scanning</strong>
                </li>
                <li>
-                 <strong>In 2012, Spring (Pivotal) realized that how much redundant work can be saved from enginners and released Spring Boot</strong>
+                 <strong>Much of these Spring Security Configuration was XML based earlier and now it is Java DSL Based</strong>
                </li>
                <li>
-                 <strong>While traditional Spring MVC gave us war files that we needed to deploy to our self downloaded Tomcat / Jetty server, Spring Boot came with its own default Tomcat Servlet Containers</strong>
+                 <strong>First, For any URLs, that Spring Security was not told to let go, it will stop the request with its Authentication Filter (1)</strong>
                </li>
                <li>
-                 <strong>Plus it introduced convention over configuration and if certain jars (database drivers and jpa starters) were present on the classpath, Spring Boot autoconfigured those using simple properties</strong>
+                 <strong>Second, the Spring Security Authentication Filter would extract the username and password (if any) and store them in a specialized object called UsernamePasswordAuthenticationToken </strong>
                </li>
                <li>
-                 <strong>The time we needed to set the application up before we started writing business logic, got reduced significantly!</strong>
+                 <strong>Third, Spring Security Authentication Filter would receive the UsernamePasswordAuthenticationToken</strong>
                </li>
                <li>
-                 <strong>Giving us instant boost in Productivity</strong>
+                 <strong>Fourth, Spring Security Authentication Filter would then delegate to the Spring Security AuthenticationManager for authenticating the user</strong>
                </li>
                <li>
-                 <strong>However, Spring removed the "s" from Boost and called it Boot to simulate the bootstrapping process made simpler</strong>
+                 <strong>Fifth, The Spring Security AuthenticationProvider is a concrete class that implements the AuthenticationManager. The ProviderManager can have a list of AuthenticationProviders all of which impelments the AuthenticationManager</strong>
                </li>
                <li>
-                 <strong>In Aviation, for example Airlines provides the service to transport passengers and goods from one place to another</strong>
+                 <strong>Sixth, The Spring Security AuthenticationProvider invokes another interface driven (UserDetailsService) Spring Security Class</strong>
                </li>
                <li>
-                 <strong>But all Airlines need security services that the Government (TSA in the US) provides, freeing Airlines to focus on travel excellence which is core business</strong>
+                 <strong>As we can see, The UserDetailsService can be implemented by a variety of InMemory, JDBC, LDAP and other classes (all from Spring Security) all of which return a standard interface Object UserDetails</strong>
                </li>
                <li>
-                 <strong>Likewise Spring Boot frees Banks and Retail Organizations (and others) to write their business logic while Spring Boot provides general services security, DB connectivity etc </strong>
+                 <strong> We can also provide our own custom implementation of the Spring Security UserDetailsService interface when our user database tables do not match the structure Spring Security wants. </strong>
+               </li>
+               <li>
+                 <strong>Seventh, The Implementation of UserDetailsService returns an object of UserDetails Interface to the AuthenticationProvider </strong>
+               </li>
+               <li>
+                 <strong>Eighth, the AuthenticationProvider returns the UserDetail object to the AuthenticationManager</strong>
+               </li>
+               <li>
+                 <strong>Ninth, the AuthenticationManager returns the UserDetail object to the AuthenticationFilter</strong>
+               </li>
+               <li>
+                 <strong>Tenth, the AuthenticationFilter returns the UserDetail object to the SecurityContext</strong>
+               </li>
+               <li>
+                 <strong>For subsequent requests by the same now logged-in user, Spring Security can retrive the token / cookies / JSESSION Cookie from the HttpServletRequest and check / match its presence in the SecurityContext, preventing further login by the same user.</strong>
                </li>
              </ul>
             </div>

@@ -20,9 +20,7 @@
                           <div class="col-md-6">
                             <label for="loyaltyStatus" class="form-label">Loyalty Status</label>
                             <select class="form-select" mb-4 col-4 id="loyaltyStatus" th:field="*{loyaltyStatus}" th:value="*{loyaltyStatus}">
-            <!--                <select class="form-select" mb-4 col-4 id="loyaltyStatus" name="loyaltyStatus" th:value="*{loyaltyStatus}">-->
                               <option value="">Select Loyalty Point</option>
-            <!--                  <option th:each="loyalStatus : ${loyaltyStatusValues}" th:value="${loyalStatus}" th:text="${loyalStatus}" th:selected="${loyalStatus==retrievedLoyaltyStatus}"></option>-->
                               <option th:each="loyalStatus : ${loyaltyStatusValues}" th:value="${loyalStatus}" th:text="${loyalStatus}"></option>
                             </select>
                             <div th:if="${#fields.hasErrors('loyaltyStatus')}" th:errors="*{loyaltyStatus}" class="invalid_field">No errors</div>

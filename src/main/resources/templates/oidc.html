@@ -17,61 +17,25 @@
                  <strong> The first word is Open which means anyone can support it free of cost</strong>
                </li>
                <li>
-                 <strong> Like there is an unspoken specification and industry agreement that all cars have four wheels. </strong>
+                 <strong> When OAuth was created by the Internet Engineering Task Force (IETF), it was all about authorization of third parties openly </strong>
                </li>
                <li>
-                 <strong> When a new entrant Tesla starts making new Cars, it adheres to that agreement </strong>
+                 <strong> OAuth and then OAuth2 have nothing to also support accessing user profile information like named, addresses, email, phone numbers etc. </strong>
                </li>
                <li>
-                 <strong> Thus we can say the unspoken and largely agreed upon Car specification is open for all. </strong>
+                 <strong> What OAuth2 does for open authorization, OIDC does the same for open accessibility of user profile information </strong>
                </li>
                <li>
-                 <strong> Similarly but more formally, the Internet Engineering Task Force (IETF) with the participation of all large IT organizations have created the OAuth Specification for Application Security</strong>
+                 <strong>Third party Identity Providers like Okta, Google, Facebook, Amazon, Microsoft, IBM and others support both OAuth2 and OIDC</strong>
                </li>
                <li>
-                 <strong>IETF released a first version in December 2007 called OAuth 1.0</strong>
+                 <strong>When your IdP support both OAuth2 and OIDC, you get user profile information included in your access token</strong>
                </li>
                <li>
-                 <strong>When the first version was found to have several gaps, a second version called OAuth 2.0 was released on January 2013.</strong>
+                 <strong>Additionally, you get an end point called the /user-info endpoint, calling which you can get detailed user profile information uniformly</strong>
                </li>
                <li>
-                 <strong>OAuth2 has formalized how clients and the services they call play their role along with the humans/machines they interact with</strong>
-               </li>
-               <li>
-                 <strong>In OAuth2, there are four roles for each type of players/actors</strong>
-               </li>
-               <li>
-                 <strong>First, Resource Owner is the Human User like us owning our Google / iCloud Photos</strong>
-               </li>
-               <li>
-                 <strong>Second, Resource Server is the API (REST) serving the Resources (Data / Photos/ Documents that belongs to the user (Google Photos API)</strong>
-               </li>
-               <li>
-                 <strong>Third, Client is the Application (Running on a Web / Mobile Browser or on a Mobile Tablet (or Capsule) Devices, making the data / photo / document requests</strong>
-               </li>
-               <li>
-                 <strong>Fourth, as these sensitive data / photo / document requests cannot be served without proper verification, the Authorization Server roles authorizes the Clients on behalf of the user to get those data / photo / documents</strong>
-               </li>
-               <li>
-                 <strong>Before OAuth, Organizations such as Home Mortgage Lenders asked for our bank account credentials to verify our income</strong>
-               </li>
-               <li>
-                 <strong>Spreading our username and password to multiple organizations is a security hole. These companies can lose our credentials and when we change them in one place they get invalid</strong>
-               </li>
-               <li>
-                 <strong>The most secured protocols of OAuth2 thus departs from having to ask user credentials and store them permanently. </strong>
-               </li>
-               <li>
-                 <strong>OAuth2 Authorization Server ask the user to first sign in and then if they want to authorize the client application (for a short time) to access the data / photo  etc </strong>
-               </li>
-               <li>
-                 <strong>When the user consents to the data / photo access request from the Clients, the Authorization server stores these consents for the client applications that has their unique Client IDs </strong>
-               </li>
-               <li>
-                 <strong>In subsequent times, when the client applications requests for an access token (typically valid for 15-30 minutes), the Auth. Server verifies the user consent and issues access tokens to the clients </strong>
-               </li>
-               <li>
-                 <strong>The Clients then make data / photo / document requests through the Resource Server APIs and the Resource Server can validate the access tokens before serving the requests. </strong>
+                 <strong>If you see that your IdP is supporting OIDC, that means it also does implicitly support OAuth2</strong>
                </li>
              </ul>
             </div>
